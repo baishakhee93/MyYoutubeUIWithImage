@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.HomeFragment">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:id="@+id/layoutCategoeriesL"
+        android:scrollbars="horizontal">
+        <LinearLayout
+            android:id="@+id/sharelL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:scrollIndicators="none"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_circal_shap"
+                android:padding="10dp"
+                android:drawablePadding="5dp"
+                android:layout_margin="3dp"
+                android:layout_centerVertical="true"
+                android:drawableStart="@drawable/baseline_menu_open_24"
+                 />
+
+            <TextView
+                android:id="@+id/all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_circal_shap"
+                android:padding="10dp"
+                android:layout_margin="3dp"
+                android:layout_centerVertical="true"
+                android:text="All" />
+
+            <TextView
+                android:id="@+id/download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_circal_shap"
+                android:padding="10dp"
+                android:layout_margin="3dp"
+                android:layout_centerVertical="true"
+                android:text="Mixes" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_circal_shap"
+                android:padding="10dp"
+                android:layout_margin="3dp"
+                android:layout_centerVertical="true"
+                android:text="Indian soap operas" />
+            <TextView
+                android:id="@+id/music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_circal_shap"
+                android:padding="10dp"
+                android:layout_margin="3dp"
+                android:layout_centerVertical="true"
+                android:text="Music" />
+            <TextView
+                android:id="@+id/gameShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_circal_shap"
+                android:padding="10dp"
+                android:layout_margin="3dp"
+                android:layout_centerVertical="true"
+                android:text="Game shows" />
+            <TextView
+                android:id="@+id/live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_circal_shap"
+                android:padding="10dp"
+                android:layout_margin="3dp"
+                android:layout_centerVertical="true"
+                android:text="Live" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/videoRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutCategoeriesL"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>
+</layout>

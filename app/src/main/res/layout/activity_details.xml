@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/imageL"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+                    <androidx.media3.ui.PlayerView
+                        android:id="@+id/playerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/headerL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageL"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/titleText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minLines="2"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/timeasText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minLines="1"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/chainalL"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/headerL"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/chainalImage"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_profile" />
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/chainalImage"
+                        android:layout_alignBaseline="@id/chainalImage"
+                        android:text="ALLTT"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:gravity="center|start"
+                        android:layout_centerVertical="true"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/descriptionTextView"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/titleTextView"
+                        android:layout_alignBaseline="@id/titleTextView"
+                        android:text="3.30M"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/selectOption"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ic_circal_shap_black"
+                        android:textSize="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:text="Subscription" />
+                </LinearLayout>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chainalL"
+                    android:scrollIndicators="none"
+
+                    android:scrollbars="horizontal">
+                <LinearLayout
+                    android:id="@+id/sharelL"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ic_circal_shap"
+                        android:padding="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableEnd="@drawable/baseline_favorite_border_24"
+                        android:layout_margin="3dp"
+                        android:layout_centerVertical="true"
+                        android:drawableStart="@drawable/baseline_favorite_24"
+                        android:text="Like" />
+
+                    <TextView
+                        android:id="@+id/share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ic_circal_shap"
+                        android:padding="10dp"
+                        android:drawablePadding="5dp"
+                        android:layout_margin="3dp"
+                        android:layout_centerVertical="true"
+                        android:drawableStart="@drawable/baseline_shortcut_24"
+                        android:text="Share" />
+
+                    <TextView
+                        android:id="@+id/download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ic_circal_shap"
+                        android:padding="10dp"
+                        android:layout_margin="3dp"
+                        android:drawablePadding="5dp"
+                        android:layout_centerVertical="true"
+                        android:drawableStart="@drawable/baseline_file_download_24"
+                        android:text="Download" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ic_circal_shap"
+                        android:padding="10dp"
+                        android:layout_margin="3dp"
+                        android:drawablePadding="5dp"
+                        android:layout_centerVertical="true"
+                        android:drawableStart="@drawable/baseline_shuffle_24"
+                        android:text="Clip" />
+                    <TextView
+                        android:id="@+id/save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ic_circal_shap"
+                        android:padding="10dp"
+                        android:layout_margin="3dp"
+                        android:drawablePadding="5dp"
+                        android:layout_centerVertical="true"
+                        android:drawableStart="@drawable/baseline_queue_24"
+                        android:text="Save" />
+                </LinearLayout>
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</layout>

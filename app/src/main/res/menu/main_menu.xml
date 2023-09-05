@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_connect_device"
+        android:title="Connect Device"
+        android:icon="@drawable/ic_connecting_device"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_notification"
+        android:title="Notifications"
+        android:icon="@drawable/ic_notification"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="always" />
+</menu>
